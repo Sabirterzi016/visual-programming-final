@@ -30,9 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(musterignc));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtrol = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@
             this.txtname = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -62,7 +62,7 @@
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtId);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Controls.Add(this.txtrol);
@@ -90,6 +90,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Müşteri Durumu Güncelleme";
             // 
+            // button3
+            // 
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(877, 126);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(42, 36);
+            this.button3.TabIndex = 30;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(858, 93);
@@ -110,12 +120,12 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Id ile Üye Sil";
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(842, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 27;
+            this.txtId.Location = new System.Drawing.Point(842, 61);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 26);
+            this.txtId.TabIndex = 27;
             // 
             // button1
             // 
@@ -136,6 +146,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(928, 195);
             this.dataGridView1.TabIndex = 25;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // txtrol
             // 
@@ -278,16 +289,6 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button3
-            // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(877, 126);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(42, 36);
-            this.button3.TabIndex = 30;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // musterignc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,7 +329,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button button3;
     }
 }

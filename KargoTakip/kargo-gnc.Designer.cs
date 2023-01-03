@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtkt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmkd = new System.Windows.Forms.ComboBox();
+            this.cmtn = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -48,15 +48,15 @@
             // 
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txtkt);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtId);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cmkd);
+            this.groupBox2.Controls.Add(this.cmtn);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
@@ -66,12 +66,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kargo Durumu Güncelleme";
             // 
-            // textBox3
+            // button1
             // 
-            this.textBox3.Location = new System.Drawing.Point(151, 142);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 26);
-            this.textBox3.TabIndex = 15;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(24, 184);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 32);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "<- Geri Dön";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(303, 41);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(693, 175);
+            this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // txtkt
+            // 
+            this.txtkt.Location = new System.Drawing.Point(151, 142);
+            this.txtkt.Name = "txtkt";
+            this.txtkt.Size = new System.Drawing.Size(121, 26);
+            this.txtkt.TabIndex = 15;
             // 
             // label6
             // 
@@ -83,12 +104,12 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Kargo Tslm Tarihi";
             // 
-            // textBox2
+            // txtId
             // 
-            this.textBox2.Location = new System.Drawing.Point(151, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 26);
-            this.textBox2.TabIndex = 13;
+            this.txtId.Location = new System.Drawing.Point(151, 41);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(121, 26);
+            this.txtId.TabIndex = 13;
             // 
             // label5
             // 
@@ -131,47 +152,27 @@
             this.button7.Text = "Güncelle";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // cmkd
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmkd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmkd.FormattingEnabled = true;
+            this.cmkd.Items.AddRange(new object[] {
             "Kargo Bayide",
             "Kargo Taşınıyor",
             "Kargo Ulaştı"});
-            this.comboBox2.Location = new System.Drawing.Point(151, 107);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 1;
+            this.cmkd.Location = new System.Drawing.Point(151, 107);
+            this.cmkd.Name = "cmkd";
+            this.cmkd.Size = new System.Drawing.Size(121, 28);
+            this.cmkd.TabIndex = 1;
             // 
-            // comboBox1
+            // cmtn
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(151, 73);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(303, 41);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(693, 175);
-            this.dataGridView1.TabIndex = 24;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(24, 184);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 32);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "<- Geri Dön";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cmtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmtn.FormattingEnabled = true;
+            this.cmtn.Location = new System.Drawing.Point(151, 73);
+            this.cmtn.Name = "cmtn";
+            this.cmtn.Size = new System.Drawing.Size(121, 28);
+            this.cmtn.TabIndex = 0;
             // 
             // kargo_gnc
             // 
@@ -192,15 +193,15 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtkt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmkd;
+        private System.Windows.Forms.ComboBox cmtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
     }

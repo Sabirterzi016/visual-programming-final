@@ -47,5 +47,13 @@ namespace KargoTakip
             conn.Close();
         }
         #endregion
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            cmtn.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            cmkd.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtkt.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+        }
     }
 }

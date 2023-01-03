@@ -14,7 +14,7 @@ namespace KargoTakip
 {
     public partial class musterignc : Form
     {
-        admin admn = new admin();
+
 
         #region MySql Baglantısı yaptım
         MySqlConnection conn = new MySqlConnection("Server=localhost;Database=kargotakip;Uid=root;Pwd='root';");
@@ -22,6 +22,7 @@ namespace KargoTakip
         MySqlDataReader adapter;
         DataTable dt;
         Baglanti baglan = new Baglanti();
+        admin admn = new admin();
         #endregion
         public musterignc()
         {
@@ -68,19 +69,19 @@ namespace KargoTakip
         }
 
         private void button6_Click(object sender, EventArgs e)
-        {
-           /* baglan.musterignc(txtname.Text, txtsname.Text, txtmail.Text, txttc.Text, txtdy.Text, txtsfre.Text, txtrol.Text);*/
+        {            
+            baglan.uyeg_uncelle(txtname.Text, txtsname.Text, txtmail.Text, txttc.Text, txtdy.Text, txtsfre.Text, txtsfre.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             conn.Open();
             MySqlCommand cmd = new MySqlCommand("DELETE from uyeler where uyeId=@id", conn);
-            cmd.Parameters.AddWithValue("@id", textBox1.Text);
+            cmd.Parameters.AddWithValue("@id", txtId.Text);
             cmd.ExecuteNonQuery();
             verigoster("SELECT * FROM admin");
             conn.Close();
-            textBox1.Clear();
+            txtId.Clear();
 
         }
 
@@ -95,6 +96,20 @@ namespace KargoTakip
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             conn.Close();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtname.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtsname.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtmail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txttc.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txtdy.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txtsfre.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            txtrol.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+
+
         }
     }
 }

@@ -248,6 +248,7 @@
     <None Include="image\magnifier %283%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="image\adm.png" />
     <Content Include="image\admin-icon.png" />
     <Content Include="image\adminpaneli.png" />
     <Content Include="image\Bus-icon.png" />

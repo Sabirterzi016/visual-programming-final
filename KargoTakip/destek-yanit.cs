@@ -20,6 +20,7 @@ namespace KargoTakip
         MySqlCommand cmd;
         MySqlDataReader adapter;
         DataTable dt;
+        Baglanti baglan = new Baglanti();
         #endregion
         public destek_yanit()
         {
@@ -47,5 +48,18 @@ namespace KargoTakip
             conn.Close();
         }
         #endregion
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtmsj.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtkn.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            richmsj.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            baglan.msj_uncelle(richmsj.Text);
+        }
     }
 }
